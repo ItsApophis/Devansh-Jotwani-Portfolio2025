@@ -1,0 +1,489 @@
+/*Navbar*/
+.navbar-nav {
+    text-align: center;
+}
+
+.glass-nav-container {
+    background-color: rgba(30, 30, 30, 0.6); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px; 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.nav-link {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 20px; 
+    border-radius: 20px; 
+    color: white !important;
+    padding: 10px 25px !important;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/*Hover and active atate (lighter bubble)*/
+.nav-link:hover, .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05); 
+}
+/*Navbar ends*/
+
+
+
+/*Homepage*/
+
+.hero-section {
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden; /*remove scrollbar*/
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2; /*Puts video behind everything*/
+}
+
+/*Overlay to darken video*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+
+.hero-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    line-height: 1.4;
+}
+
+.bottom-text {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    opacity: 0.8; 
+}
+
+/*Responsive adjustments for mobile*/
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 60px; 
+    }
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    .bottom-text {
+        font-size: 12px;
+        display: none; 
+    }
+}
+/*Homepage ends*/
+
+
+
+
+/*Work section*/
+
+
+.work-section {
+    background-color: black;
+    width: 100%; 
+}
+
+
+.work-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.work-subtitle {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #D35100; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-card {
+    height: 555px; 
+    border-radius: 20px;
+    border: 1px solid #D35100;
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-year {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #D35100;
+}
+
+.project-name {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 64px;
+    color: white;
+    line-height: 1.1;
+}
+
+/*Animation trigger*/
+.project-card:hover .hover-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+/*Work Section ends*/
+
+
+
+/*About page*/
+
+
+.about-name {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 96px;
+    color: #D35100;
+    line-height: 1.1;
+}
+
+
+.about-star {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900; 
+    font-size: 300px;
+    color: white;
+    line-height: 0;
+    display: inline-block;
+    transform: translateY(50px);
+}
+
+.about-bio {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 64px;
+    color: white;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.about-desc {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    color: #D35100;
+    text-align: justify;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 1290px;
+    border-radius: 20px;
+    border: 1px solid #D35100;   
+    display: block;
+    margin: 0 auto; 
+}
+
+.about-cta {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 64px;
+    color: #D35100;
+    line-height: 1.2;
+}
+
+.cta-offset {
+    display: inline-block;
+    transform: translateX(-40px); 
+}
+
+.social-link-head {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 32px; 
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.social-link-head:hover {
+    color: #D35100;
+}
+
+.social-link-sub {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #D35100;
+}
+
+/*Responsive adjustments for mobile*/
+@media (max-width: 992px) {
+    .about-name { font-size: 60px; }
+    .about-star { font-size: 150px; transform: translateY(20px); }
+    .about-bio { font-size: 40px; }
+    .about-desc { font-size: 20px; }
+    .about-cta { font-size: 32px; }
+    .cta-offset { transform: none; }
+    .about-star { font-size: 150px; transform: translateY(20px); }
+}
+/*About page ends*/
+
+
+
+
+/*Contact page*/
+
+
+.contact-divider {
+    border-top: 3px solid #D35100;    
+    opacity: 1;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.hydration-text {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 0; 
+}
+
+
+.hydration-step-1 {
+    margin-right: 25%;
+}
+
+.hydration-step-2 {
+    margin-left: 35%;
+}
+
+.text-orange {
+    color: #D35100;
+}
+
+/*Responsive adjust for mobile*/
+@media (max-width: 768px) {
+    .hydration-text { font-size: 28px; }
+    .hydration-step-1 { margin-right: 0; }
+    .hydration-step-2 { margin-left: 0; }
+}
+/*Contact page ends*/
+
+
+
+/*Project pages*/
+/*typolux*/
+.project-page {
+    padding-top: 150px !important;
+}
+
+.project-head-year {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #D35100;
+}
+
+.project-head-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 64px;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.close-btn {
+    position: fixed;
+    top: 150px; 
+    right: 5%; 
+    font-size: 48px;
+    color: #D35100;
+    z-index: 1000; 
+    transition: transform 0.2s;
+}
+
+.close-btn:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+
+
+.project-img-wide {
+    width: 100%;
+    max-width: 1325px;
+    height: 555px; 
+    object-fit: cover;    
+    border-radius: 20px;
+    border: 1px solid #D35100;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.project-img-tall {
+    width: 100%;
+    max-width: 1325px;
+    height: 934px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid #D35100;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.brief-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 48px;
+    color: white;
+    margin-top: -8px; 
+}
+
+.meta-label {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #D35100;
+    margin-bottom: 5px;
+}
+
+.meta-list li {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+}
+
+.balance-box {
+    width: 62px;
+    height: 43px;
+    background-color: #D35100;
+    border-radius: 2px;
+    flex-shrink: 0; 
+    margin-top: 5px; 
+}
+
+
+.brief-text {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    color: #D35100;
+    text-align: justify;
+    line-height: 1.4;
+    margin-top: 0; 
+}
+
+/*Responsive adjustments for mobile*/
+@media (max-width: 992px) {
+    .project-head-title { font-size: 48px; }
+    .brief-title { font-size: 36px; }
+    .brief-text { font-size: 20px; }
+    .close-btn { top: 120px; right: 20px; font-size: 32px; }
+    .project-img-wide, .project-img-tall {
+        height: auto;
+        aspect-ratio: 1325/555; 
+    }
+}
+
+
+
+/*Arcanum 2nd image*/
+
+.project-img-huge {
+    width: 100%;
+    max-width: 1325px;
+    height: 1325px; 
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid #D35100;
+    display: block;
+    margin: 0 auto;
+    
+/*Responsive adjustments for mobile*/
+@media (max-width: 992px) {
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+
+
+/*photowalk image grid*/
+
+.project-img-half-tall {
+    width: 100%;
+    max-width: 636px;
+    height: 934px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid #D35100;
+    display: block;
+    margin: 0 auto;
+}
+
+/*Responsive adjustments for mobile*/
+@media (max-width: 992px) {
+    .project-img-half-tall {
+        height: auto;
+        aspect-ratio: 636/934;
+    }
+}
+
+/*Project pages ends*/
