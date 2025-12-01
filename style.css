@@ -486,4 +486,78 @@
     }
 }
 
+/*Photowalk image grid ends*/
+
+
+/*Extra adjustments for mobile*/
+
+@media (max-width: 992px) {
+
+    .hero-title, 
+    .work-title, 
+    .project-head-title,
+    .about-name {
+        font-size: 48px; 
+        line-height: 1.1;
+        word-wrap: break-word; 
+    }
+
+    .brief-title {
+        font-size: 32px;
+    }
+
+    
+    .hero-subtitle{
+        font-size: 18px;
+        text-align: left; 
+        line-height: 1.5;
+    }
+    .work-subtitle,
+    .brief-text,
+    .about-desc,
+    .about-bio {
+        font-size: 18px; 
+        text-align: left; 
+        line-height: 1.5;
+    }
+
+
+    .balance-box {
+        margin-right: 20px !important; 
+        margin-bottom: 0 !important;
+        width: 40px; 
+        height: 28px;
+    }
+
+
+    .project-card,
+    .project-img-wide, 
+    .project-img-tall, 
+    .project-img-huge,
+    .project-img-half-tall {
+        height: auto !important; 
+        aspect-ratio: 4 / 3; 
+        max-height: 400px; 
+    }
+
+    .project-page, 
+    .about-section, 
+    .contact-section,
+    .work-section {
+        padding-top: 100px !important; 
+        padding-bottom: 40px;
+    }
+    
+    .container-fluid.px-5 {
+        padding-left: 20px !important; 
+        padding-right: 20px !important;
+    }
+
+    .row.gx-5 {
+        gap: 30px; 
+    }
+}
+
 /*Project pages ends*/
+
+/*--------------CODE END--------------------*/
